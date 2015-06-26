@@ -1,0 +1,9 @@
+---
+- name: install centos packages
+  yum: pkg={{item}} state=installed
+  with_items:
+     - mysql
+     - mysql-server
+     - nginx
+     - php-fpm
+     - php-mysql

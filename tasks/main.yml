@@ -1,0 +1,9 @@
+---
+- include: packages.yml
+- include: assets.yml
+
+- service: name=mysqld state=restarted enabled=yes
+
+- service: name=php-fpm state=restarted enabled=yes
+
+- service: name=nginx state=restarted enabled=yes
